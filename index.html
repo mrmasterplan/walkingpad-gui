@@ -1,1 +1,30 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Gray Circles</title>
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: darkgray; /* Gray background */
+            border-radius: 50%; /* Makes the div a circle */
+            color: gray; /* Dark gray text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle" onclick="alert('Circle 1 clicked')">+</div>
+    <div class="circle" onclick="alert('Circle 2 clicked')"></div>
+    <div class="circle" onclick="alert('Circle 3 clicked')">-</div>
+    <div class="circle" onclick="alert('Circle 4 clicked')">⮂</div>
+</body>
+</html>
