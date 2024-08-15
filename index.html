@@ -5,17 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clickable Gray Circles</title>
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 100px;
+        }
+        .container {
+            width: 120px; /* Adjusted width to include padding */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; /* Distributes space evenly between and around circles */
+            align-items: center;
+            padding: 60px; /* Padding around the edges */
+            background-color: gray;
+            border: 2px solid black;
+            border-radius: 100px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
         .circle {
             width: 100px;
             height: 100px;
-            background-color: darkgray; /* Gray background */
+            background-color: gray; /* Gray background */
             border-radius: 50%; /* Makes the div a circle */
-            color: black; /* Dark gray text */
+            color: darkgray; /* Dark gray text */
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
-            font-size: 16px;
+            font-size: 50px;
             font-family: Arial, sans-serif;
             margin: 10px;
             transition: all 0.3s ease; /* Smooth transition for the press effect */
@@ -30,9 +50,11 @@
     </style>
 </head>
 <body>
-    <div class="circle" onclick="alert('Circle 1 clicked')">+</div>
-    <div class="circle" onclick="alert('Circle 2 clicked')"></div>
-    <div class="circle" onclick="alert('Circle 3 clicked')">-</div>
-    <div class="circle" onclick="alert('Circle 4 clicked')">⮂</div>
+    <div class="container">
+        <div class="circle" onclick="alert('Circle 1 clicked')">+</div>
+        <div class="circle" onclick="alert('Circle 2 clicked')"></div>
+        <div class="circle" onclick="alert('Circle 3 clicked')">-</div>
+        <div class="circle" onclick="alert('Circle 4 clicked')">⮂</div>
+    </div>
 </body>
 </html>
