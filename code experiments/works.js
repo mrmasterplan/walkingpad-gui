@@ -1,6 +1,7 @@
-navigator.bluetooth.requestDevice({
-  acceptAllDevices: true
-})
+navigator.bluetooth.requestDevice(
+  {
+    filters: [{ name: 'WalkingPad' }]
+  })
 .then(device => {
   console.log(device.name);
   return device.gatt.connect();
