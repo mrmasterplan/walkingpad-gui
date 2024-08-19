@@ -25,11 +25,20 @@
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
 
             <Button
-                x:Name="CounterBtn"
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+                x:Name="ConnectBtn"
+                Text="Connect" 
+                Clicked="ConnectClicked"
                 HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="ModeManualBtn"
+                Text="Manual Mode" 
+                Clicked="ModeManualClicked"
+                HorizontalOptions="Fill" />
+
+            <Label x:Name="ResultLabel"
+                FontSize="24"
+                HorizontalOptions="Center" />
         </VerticalStackLayout>
     </ScrollView>
 
