@@ -1,9 +1,7 @@
 import asyncio
 import tkinter as tk
 from async_tkinter_loop import async_handler, async_mainloop
-from ph4_walkingpad import pad
-from ph4_walkingpad.pad import Scanner, WalkingPad, WalkingPadCurStatus, WalkingPadLastStatus, Controller
-from ph4_walkingpad.utils import setup_logging
+from ph4_walkingpad.pad import Scanner, WalkingPad, WalkingPadCurStatus, Controller
 
 class MyController(Controller):
     status: WalkingPadCurStatus
@@ -37,6 +35,11 @@ class CounterApp:
 
         self.speed_down_button = tk.Button(self.root, text="Speed Down", command=self.speed_down)
         self.speed_down_button.pack(fill=tk.X)
+
+        # add hotkeys
+        self.root.bind("<Up>", lambda event: self.speed_up())
+        self.root.bind("<Down>", lambda event: self.speed_down())
+        self.root.bind("<space>", lambda event: self.start_stop())
 
     @async_handler
     async def connect(self):
